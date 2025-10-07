@@ -2,62 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monday Labs</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #111;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monday Labs — Amplifying Human Potential Through AI</title>
+  <meta name="description" content="Monday Labs builds human-centric AI that amplifies abilities across all communities, with a focus on universal accessibility and practical innovation.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://mondaylabs.dev/">
 
-    img.logo {
-      max-width: 300px;
-      margin-bottom: 2.5rem;
-    }
+  <!-- Open Graph -->
+  <meta property="og:title" content="Monday Labs — Amplifying Human Potential Through AI Innovation">
+  <meta property="og:description" content="Human-centric AI. Universal accessibility. Practical innovation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mondaylabs.dev/">
+  <meta property="og:image" content="favicon.svg">
 
-    h1 {
-      font-size: 4.5rem;
-      margin: 0;
-      line-height: 1.1;
-      letter-spacing: -1px;
-      max-width: 90%;
-    }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Monday Labs — Amplifying Human Potential Through AI Innovation">
+  <meta name="twitter:description" content="Human-centric AI. Universal accessibility. Practical innovation.">
 
-    p.footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 1rem;
-      color: #666;
-    }
-
-    p.footer a {
-      color: #666;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    p.footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <img src="logo.png" alt="Monday Labs Logo" class="logo">
-  <h1>We Build Software<br> Making Your Life Productive.</h1>
-  <p class="footer">
-    &copy; Monday Labs LLC | 
-    <a href="mailto:hello@mondaylabs.dev">hello@mondaylabs.dev</a> | 
-    <a href="productivity-privacy-policy.html" target="_blank">ProDUCKtivity Privacy Policy</a>
-  </p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero" role="banner">
+    <div class="container">
+      <!-- Header bar: logo + top-right navigation -->
+      <div class="header-bar">
+        <a href="#" class="wordmark" aria-label="Monday Labs home">
+          <svg class="spark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+            <path d="M3 14 L14 3 L25 14 L14 25 Z"></path>
+          </svg>
+          <span class="ml">Monday Labs</span>
+        </a>
+        <nav class="top-nav" aria-label="Keyboard navigation">
+          <span class="prompt">#</span>
+          <span> Press <span class="kbd">1</span> Mission <span class="kbd">2</span> Approach <span class="kbd">3</span> Contact</span>
+        </nav>
+      </div>
+
+      <!-- Terminal component -->
+      <div class="terminal" style="margin-top: 20px;" aria-live="polite" aria-label="Interactive terminal showcasing Monday Labs values">
+        <div class="terminal-header" role="presentation">
+          <span class="dots" aria-hidden="true">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </span>
+          <span class="terminal-title">mondaylabs</span>
+        </div>
+        <div class="terminal-body">
+          <span class="line"><span class="prompt">$</span> <span class="cmd" id="type-line">Amplifying human potential through AI innovation</span><span class="cursor" aria-hidden="true"></span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section id="mission">
+      <div class="container">
+        <div class="kicker">Mission</div>
+        <h2>Amplifying Human Potential Through AI</h2>
+        <p class="lead">
+          Monday Labs exists to transcend human limitations and expand capabilities across communities and age groups through intelligent AI solutions.
+          Technology should amplify abilities, not replace them. We build AI-powered tools that remove barriers, enhance individual capabilities, and democratize access to advanced solutions.
+        </p>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="container">
+        <div class="kicker">Approach</div>
+        <h2>Human‑Centric, Accessible, Practical</h2>
+        <ul class="values" aria-label="Core approach values">
+          <li><span class="bullet">▸</span>Human‑centric — technologies that enhance rather than replace human capabilities</li>
+          <li><span class="bullet">▸</span>Universal accessibility — solutions designed for all ages and communities</li>
+          <li><span class="bullet">▸</span>Practical innovation — AI usage that solves real‑world problems with immediate impact</li>
+          <li><span class="bullet">▸</span>Barrier removal — breaking down limitations that restrict human potential</li>
+          <li><span class="bullet">▸</span>Simplification through AI — distilling complex processes into intuitive experiences</li>
+          <li><span class="bullet">▸</span>Adaptive intelligence — systems that learn and personalize to individual needs</li>
+          <li><span class="bullet">▸</span>Cross‑generational design — interfaces that work seamlessly across age groups</li>
+          <li><span class="bullet">▸</span>Community‑bridge technology — connecting users rather than isolating them</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="kicker">Contact</div>
+        <h2>Collaborate with Monday Labs</h2>
+        <p class="lead contact">
+          Email <a href="mailto:info@mondaylabs.dev">info@mondaylabs.dev</a> to connect.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-inner">
+      <span>&copy; <span id="year"></span> Monday Labs LLC</span>
+      <span>Keyboard navigation: <span class="kbd">1</span> Mission <span class="kbd">2</span> Approach <span class="kbd">3</span> Contact</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
