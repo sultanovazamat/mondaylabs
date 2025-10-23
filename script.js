@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Keyboard navigation: 1=Mission, 2=Approach, 3=Contact
 (function () {
-  var map = { '1': '#mission', '2': '#approach', '3': '#contact' };
+  var map = { '1': '#mission', '2': '#approach', '3': '#products', '4': '#contact' };
   window.addEventListener('keydown', function (e) {
     if (map[e.key]) {
       var target = document.querySelector(map[e.key]);

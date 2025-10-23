@@ -254,3 +254,41 @@ footer {
   .header-bar { flex-wrap: wrap; }
   .top-nav { font-size: 14px; gap: 6px; }
 }
+/* Programs section logos */
+.program-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.program-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  background: var(--text);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+}
+
+.program-logo img {
+  display: block;
+  height: 36px;
+  width: auto;
+  max-width: 220px;
+  filter: saturate(0.9) contrast(1.05);
+}
+
+@media (hover: hover) {
+  .program-logo:hover img {
+    filter: saturate(1) contrast(1.1);
+  }
+}
+
+@media (max-width: 520px) {
+  .program-logo img {
+    height: 28px;
+  }
+}
