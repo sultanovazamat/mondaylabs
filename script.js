@@ -6,99 +6,44 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Typing effect with reduced motion respect (single command line with deletion)
+// Scroll-reveal animation using IntersectionObserver
 (function () {
-  var prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var typeEl = document.getElementById('type-line');
-  if (!typeEl) return;
+  var prefersReduced =
+    window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var lines = [
-    'echo "Products that use AI to amplify potential"',
-    "printf 'Human‑centric, access‑first'",
-    'echo "Practical by design, used in the real world"',
-    "printf 'AI in service of outcomes'"
-  ];
+  if (prefersReduced) return; // CSS handles fallback: elements are visible by default
 
-  var idx = 0;
+  var sections = document.querySelectorAll('.reveal');
+  if (!sections.length) return;
 
-  function nextLine() {
-    idx = (idx + 1) % lines.length;
-    return lines[idx];
-  }
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
-  function typeWrite(textEl, full, cb) {
-    var i = 0;
-    var step = Math.max(1, Math.floor(full.length / 20));
-    textEl.textContent = '';
-    var timer = setInterval(function () {
-      i += step;
-      textEl.textContent = full.slice(0, i);
-      if (i >= full.length) {
-        clearInterval(timer);
-        if (cb) cb();
-      }
-    }, 30);
-  }
-
-  function typeDelete(textEl, cb) {
-    var current = textEl.textContent || '';
-    var i = current.length;
-    var step = Math.max(1, Math.floor(i / 20));
-    var timer = setInterval(function () {
-      i -= step;
-      if (i <= 0) {
-        textEl.textContent = '';
-        clearInterval(timer);
-        if (cb) cb();
-      } else {
-        textEl.textContent = current.slice(0, i);
-      }
-    }, 30);
-  }
-
-  function cycleAnimated() {
-    var line = nextLine();
-    typeWrite(typeEl, line, function () {
-      // Brief pause after typing, then delete characters
-      setTimeout(function () {
-        typeDelete(typeEl, function () {
-          // Short pause before next line
-          setTimeout(cycleAnimated, 250);
-        });
-      }, 900);
-    });
-  }
-
-  if (prefersReduced) {
-    // No animation: periodic full-text updates only
-    setInterval(function () {
-      typeEl.textContent = nextLine();
-    }, 4000);
-  } else {
-    cycleAnimated();
-  }
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
 })();
 
-// Keyboard navigation: 1=Mission, 2=Approach, 3=Contact
+// Smooth-scroll for same-page anchor links (fallback for browsers without CSS scroll-behavior)
 (function () {
-  var map = { '1': '#mission', '2': '#approach', '3': '#products', '4': '#contact' };
-  window.addEventListener('keydown', function (e) {
-    if (map[e.key]) {
-      var target = document.querySelector(map[e.key]);
-      if (target) {
-        // Smooth scroll; fallback if not supported
-        try {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } catch (_) {
-          target.scrollIntoView();
-        }
-        // move focus to section heading for accessibility
-        var h2 = target.querySelector('h2');
-        if (h2) {
-          h2.setAttribute('tabindex', '-1');
-          h2.focus();
-        }
-      }
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+
+    var target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  }, { passive: true });
+  });
 })();

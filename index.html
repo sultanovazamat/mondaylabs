@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Monday Labs — Amplifying Human Potential Through AI</title>
-  <meta name="description" content="Monday Labs builds human-centric AI. Talka — an AI-powered English speaking companion helping adults speak confidently, naturally, and fast.">
+  <meta name="description"
+    content="Monday Labs builds human-centric AI solutions that transcend limitations, expand capabilities, and democratize access to advanced technology across communities and age groups.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://mondaylabs.dev/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Monday Labs — Amplifying Human Potential Through AI Innovation">
-  <meta property="og:description" content="Talka — AI-powered English speaking companion. Human-centric AI, universal accessibility, practical innovation.">
+  <meta property="og:description"
+    content="Human-centric AI solutions that remove barriers, enhance individual capabilities, and democratize access to advanced technology.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mondaylabs.dev/">
   <meta property="og:image" content="favicon.svg">
@@ -19,54 +22,38 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Monday Labs — Amplifying Human Potential Through AI Innovation">
-  <meta name="twitter:description" content="Talka — AI-powered English speaking companion. Human-centric AI, universal accessibility, practical innovation.">
+  <meta name="twitter:description"
+    content="Human-centric AI solutions that remove barriers, enhance individual capabilities, and democratize access to advanced technology.">
 
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
+    "@type": "Organization",
+    "name": "Monday Labs LLC",
+    "url": "https://mondaylabs.dev/",
+    "logo": "https://mondaylabs.dev/favicon.svg",
+    "memberOf": [
       {
         "@type": "Organization",
-        "name": "Monday Labs LLC",
-        "url": "https://mondaylabs.dev/",
-        "logo": "https://mondaylabs.dev/favicon.svg",
-        "memberOf": [
-          {
-            "@type": "Organization",
-            "name": "NVIDIA Inception Program",
-            "url": "https://www.nvidia.com/en-us/startups/"
-          },
-          {
-            "@type": "Organization",
-            "name": "Microsoft for Startups",
-            "url": "https://www.microsoft.com/startups"
-          }
-        ]
+        "name": "NVIDIA Inception Program",
+        "url": "https://www.nvidia.com/en-us/startups/"
       },
       {
-        "@type": "SoftwareApplication",
-        "name": "Talka",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Web",
-        "url": "https://mondaylabs.dev/#products",
-        "description": "Talka is an AI-powered English communication assistant designed to help adults speak confidently, naturally, and fast. Built for busy professionals and lifelong learners—especially users aged 40 and above—Talka focuses on immediate real-world speaking ability rather than grammar drills or gamified distractions.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Monday Labs LLC",
-          "url": "https://mondaylabs.dev/"
-        }
+        "@type": "Organization",
+        "name": "Microsoft for Startups",
+        "url": "https://www.microsoft.com/startups"
       }
     ]
   }
   </script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="hero" role="banner">
+  <header class="site-header" role="banner">
     <div class="container">
-      <!-- Header bar: logo + top-right navigation -->
       <div class="header-bar">
         <a href="#" class="wordmark" aria-label="Monday Labs home">
           <svg class="spark" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
@@ -74,92 +61,89 @@
           </svg>
           <span class="ml">Monday Labs</span>
         </a>
-        <nav class="top-nav" aria-label="Keyboard navigation">
-          <span class="prompt">#</span>
-          <span> Press <span class="kbd">1</span> Mission <span class="kbd">2</span> Approach <span class="kbd">3</span> Products <span class="kbd">4</span> Contact</span>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#mission">Mission</a>
+          <a href="#approach">Approach</a>
+          <a href="#programs">Programs</a>
+          <a href="#contact">Contact</a>
         </nav>
-      </div>
-
-      <!-- Terminal component -->
-      <div class="terminal" style="margin-top: 20px;" aria-live="polite" aria-label="Interactive terminal showcasing Monday Labs values">
-        <div class="terminal-header" role="presentation">
-          <span class="dots" aria-hidden="true">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-          </span>
-          <span class="terminal-title">mondaylabs</span>
-        </div>
-        <div class="terminal-body">
-          <span class="line"><span class="prompt">$</span> <span class="cmd" id="type-line">Amplifying human potential through AI innovation</span><span class="cursor" aria-hidden="true"></span></span>
-        </div>
       </div>
     </div>
   </header>
 
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        AI Innovation Lab
+      </div>
+      <h1>Amplifying Human<br>Potential Through <span class="accent-word">AI</span></h1>
+      <p class="hero-subtitle">
+        Technology should amplify abilities, not replace them. We build AI&#8209;powered tools
+        that remove barriers, enhance individual capabilities, and democratize access to
+        advanced solutions.
+      </p>
+    </div>
+  </section>
+
   <main id="main" role="main">
-    <section id="mission">
+    <section id="mission" class="reveal">
       <div class="container">
         <div class="kicker">Mission</div>
         <h2>Amplifying Human Potential Through AI</h2>
         <p class="lead">
-          Monday Labs exists to transcend human limitations and expand capabilities across communities and age groups through intelligent AI solutions.
-          Technology should amplify abilities, not replace them. We build AI-powered tools that remove barriers, enhance individual capabilities, and democratize access to advanced solutions.
+          Monday Labs exists to transcend human limitations and expand capabilities across communities and age groups
+          through intelligent AI solutions.
+          Technology should amplify abilities, not replace them. We build AI-powered tools that remove barriers, enhance
+          individual capabilities, and democratize access to advanced solutions.
         </p>
       </div>
     </section>
 
-    <section id="approach">
+    <section id="approach" class="reveal">
       <div class="container">
         <div class="kicker">Approach</div>
         <h2>Human‑Centric, Accessible, Practical</h2>
         <ul class="values" aria-label="Core approach values">
-          <li><span class="bullet">▸</span>Human‑centric — technologies that enhance rather than replace human capabilities</li>
-          <li><span class="bullet">▸</span>Universal accessibility — solutions designed for all ages and communities</li>
-          <li><span class="bullet">▸</span>Practical innovation — AI usage that solves real‑world problems with immediate impact</li>
-          <li><span class="bullet">▸</span>Barrier removal — breaking down limitations that restrict human potential</li>
-          <li><span class="bullet">▸</span>Simplification through AI — distilling complex processes into intuitive experiences</li>
-          <li><span class="bullet">▸</span>Adaptive intelligence — systems that learn and personalize to individual needs</li>
-          <li><span class="bullet">▸</span>Cross‑generational design — interfaces that work seamlessly across age groups</li>
-          <li><span class="bullet">▸</span>Community‑bridge technology — connecting users rather than isolating them</li>
+          <li><span class="bullet">▸</span>Human‑centric — technologies that enhance rather than replace human
+            capabilities</li>
+          <li><span class="bullet">▸</span>Universal accessibility — solutions designed for all ages and communities
+          </li>
+          <li><span class="bullet">▸</span>Practical innovation — AI usage that solves real‑world problems with
+            immediate impact</li>
+          <li><span class="bullet">▸</span>Barrier removal — breaking down limitations that restrict human potential
+          </li>
+          <li><span class="bullet">▸</span>Simplification through AI — distilling complex processes into intuitive
+            experiences</li>
+          <li><span class="bullet">▸</span>Adaptive intelligence — systems that learn and personalize to individual
+            needs</li>
+          <li><span class="bullet">▸</span>Cross‑generational design — interfaces that work seamlessly across age groups
+          </li>
+          <li><span class="bullet">▸</span>Community‑bridge technology — connecting users rather than isolating them
+          </li>
         </ul>
       </div>
     </section>
 
-    <section id="products">
-      <div class="container">
-        <div class="kicker">Products</div>
-        <h2>Talka — AI‑Powered English Speaking Companion</h2>
-        <p class="lead">
-          Talka is our flagship project — an AI‑driven English communication assistant designed to help adults speak confidently, naturally, and fast.
-          Built for busy professionals and lifelong learners — especially users aged 40 and above — Talka focuses on immediate real‑world speaking ability rather than grammar drills or gamified distractions.
-        </p>
-        <ul class="values" aria-label="Talka key features">
-          <li><span class="bullet">▸</span>Conversational learning — natural dialogues and adaptive guidance that let users start speaking right away</li>
-          <li><span class="bullet">▸</span>Powered by Gen AI — uses large language models, speech tech for smooth, human‑like interaction</li>
-          <li><span class="bullet">▸</span>Innovation ecosystem — developed under the NVIDIA Inception Program, with planned cloud integrations for scale</li>
-          <li><span class="bullet">▸</span>Human‑centric by design — simplifies communication instead of complicating it, empowering learners of any age</li>
-        </ul>
-        
-      </div>
-    </section>
-
-    <section id="programs">
+    <section id="programs" class="reveal">
       <div class="container">
         <div class="kicker">Programs</div>
+        <h2>Backed by Industry Leaders</h2>
         <p class="lead">Monday Labs is supported by NVIDIA Inception and Microsoft for Startups programs.</p>
         <div class="program-logos" role="list" aria-label="Program memberships">
-          <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener" class="program-logo" role="listitem" aria-label="NVIDIA Inception">
+          <a href="https://www.nvidia.com/en-us/startups/" target="_blank" rel="noopener" class="program-logo"
+            role="listitem" aria-label="NVIDIA Inception">
             <img src="logo_nvidia_inception.png" alt="NVIDIA Inception">
           </a>
-          <a href="https://www.microsoft.com/startups" target="_blank" rel="noopener" class="program-logo" role="listitem" aria-label="Microsoft for Startups">
+          <a href="https://www.microsoft.com/startups" target="_blank" rel="noopener" class="program-logo"
+            role="listitem" aria-label="Microsoft for Startups">
             <img src="logo_microsoft_for_startups.png" alt="Microsoft for Startups">
           </a>
         </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
       <div class="container">
         <div class="kicker">Contact</div>
         <h2>Collaborate with Monday Labs</h2>
@@ -173,10 +157,11 @@
   <footer role="contentinfo">
     <div class="container footer-inner">
       <span>&copy; <span id="year"></span> Monday Labs LLC</span>
-      <span>Keyboard navigation: <span class="kbd">1</span> Mission <span class="kbd">2</span> Approach <span class="kbd">3</span> Products <span class="kbd">4</span> Contact</span>
+      <span>Built with purpose in mind</span>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
 </body>
+
 </html>
